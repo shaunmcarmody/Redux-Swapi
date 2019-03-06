@@ -13,7 +13,6 @@ export const FAILURE = 'FAILURE';
 // remember that now we have controll over our thunk-based action creator
 
 
-
 export const fetching = () => dispatch => {
     dispatch({
         type: FETCHING,
@@ -35,6 +34,7 @@ export const fetching = () => dispatch => {
             });
         })
         .catch(err => {
+            console.log(err)
             dispatch({
                 type: FAILURE,
                 payload: {
