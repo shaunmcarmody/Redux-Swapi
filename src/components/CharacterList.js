@@ -5,9 +5,13 @@ import Character from "./Character";
 const CharacterList = props => {
   return (
     <ul>
-      {props.characters.map(character => {
-        return <Character key={character.name} character={character} />;
-      })}
+      {
+        props.characters && (
+          props.characters.map(character => (
+            <Character key={character.name} character={character} />
+          ))
+        )
+      }
     </ul>
   );
 };
